@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  nodeserver:
+    container_name: ConfMirea-Site
+    environment:
+      - API_URL=https://apiconf.mirea.ru
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

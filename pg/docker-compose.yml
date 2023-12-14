@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    container_name: ConfMirea-Postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: DigitalJustice
+      POSTGRES_PASSWORD: CONFMIREAMEGAPASSWORD
+      POSTGRES_DB: DigitalJustice
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: rootroot
+    ports:
+      - "5050:80"

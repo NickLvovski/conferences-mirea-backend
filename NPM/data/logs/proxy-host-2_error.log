@@ -1,0 +1,2 @@
+2023/08/23 08:35:26 [error] 330#330: *305 connect() failed (111: Connection refused) while connecting to upstream, client: 91.210.7.91, server: adminconf.mirea.ru, request: "GET / HTTP/1.0", upstream: "http://0.0.0.0:2375/", host: "adminconf.mirea.ru"
+2023/08/23 08:35:26 [error] 330#330: *307 connect() failed (111: Connection refused) while connecting to upstream, client: 91.210.7.91, server: adminconf.mirea.ru, request: "GET /favicon.ico HTTP/1.0", upstream: "http://0.0.0.0:2375/favicon.ico", host: "adminconf.mirea.ru", referrer: "https://adminconf.mirea.ru/"

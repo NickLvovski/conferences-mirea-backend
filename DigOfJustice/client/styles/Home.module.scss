@@ -1,0 +1,19 @@
+.container {
+  max-width: 1920px;
+  width: calc(100vw - 4px);
+}
+
+// @media (max-width: 1440px) {
+//   .container {
+//     width: 100%;
+//     margin: 0;
+//   }
+// }
+
+@media (max-width: 900px) {
+  .container {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+

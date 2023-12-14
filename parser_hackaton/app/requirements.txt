@@ -1,0 +1,9 @@
+Django
+celery
+django-celery-beat
+bs4
+djangorestframework
+djoser
+psycopg2
+redis
+gunicorn
