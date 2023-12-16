@@ -32,8 +32,7 @@ const columns: GridColDef[] = [
     field: "settings",
     headerName: "Управление",
     width: 130,
-    renderCell: (cell) => {
-      console.log(cell);
+    renderCell: () => {
       return (
         <Box
           sx={{

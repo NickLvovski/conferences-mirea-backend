@@ -34,8 +34,11 @@ class programState {
   }
 
   async getProgram() {
-    let response = await $api.get<ProgramInterface>("/admin/program");
-    console.log(response.data);
+    try {
+      let response = await $api.get<ProgramInterface>("/admin/program");
+    } catch (e) {
+      console.log(e)
+    }
   }
 }
 

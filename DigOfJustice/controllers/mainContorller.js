@@ -165,7 +165,6 @@ class mainContorller {
   async getPressCenter(req, res) {
     try {
       let { API_URL } = await process.env;
-      console.log(process.env);
       let data = fs.readdirSync("./files/images/pressCenter");
       data = data.map((f) => {
         return (f = `${API_URL}/img/pressCenter/${f}`);

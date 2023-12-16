@@ -19,7 +19,6 @@ class NewsState {
   async getNews() {
     let response = await $api.get<NewsType[]>("/admin/news");
     this.news = response.data;
-    console.log(this.news);
     
   }
 }

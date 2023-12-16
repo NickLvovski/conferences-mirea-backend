@@ -32,8 +32,12 @@ class RegisterState {
   }
 
   async getRegisterList() {
-    let response = await $api.get<SectionListType[]>("/api/sections");
-    this.setRegList(response.data);
+    try {
+      let response = await $api.get<SectionListType[]>("/api/sections");
+      this.setRegList(response.data);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   async sendReport(data: ReportType) {

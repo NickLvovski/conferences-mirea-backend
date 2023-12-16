@@ -133,17 +133,17 @@ class HeaderState {
   }
 
   async getProgramm() {
-    console.log(process.env);
-    let response = await $api.get<ProgramTypes>("/api/program");
-    
-    console.log(response.data);
-    
-    this.program = response.data;
-    if (response.data.sections) {
-      this.currentButton = response.data.sections[0].id;
-      this.currentList = response.data.sections[0].sectionList.sort((a, b) => {
-        return a.id - b.id;
-      });
+    try {
+      let response = await $api.get<ProgramTypes>("/api/program");
+      this.program = response.data;
+      if (response.data.sections) {
+        this.currentButton = response.data.sections[0].id;
+        this.currentList = response.data.sections[0].sectionList.sort((a, b) => {
+          return a.id - b.id;
+        });
+      }
+    } catch (e) {
+      console.log(e)
     }
   }
 
